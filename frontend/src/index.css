@@ -1,0 +1,62 @@
+:root {
+  --bg: #f2f4f7; --surface: #fff; --ink: #18212f; --muted: #667085; --line: #d9dee6;
+  --accent: #1d4ed8; --danger: #b42318;
+  --wishlist: #6b7280; --applied: #1d4ed8; --interview: #b45309; --offer: #15803d; --rejected: #b42318;
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); line-height: 1.5; }
+a { color: var(--accent); }
+.muted { color: var(--muted); font-size: .85rem; }
+.error { background: #fef3f2; color: var(--danger); border: 1px solid #fecdca; padding: .6rem .8rem; border-radius: 6px; }
+.center-note { text-align: center; color: var(--muted); padding: 3rem 1rem; }
+
+.nav { display: flex; justify-content: space-between; align-items: center; padding: .8rem 1.5rem; background: var(--surface); border-bottom: 1px solid var(--line); }
+.brand { font-weight: 700; font-size: 1.1rem; }
+.nav-right { display: flex; gap: 1rem; align-items: center; }
+
+.btn { background: var(--accent); color: #fff; border: 1px solid var(--accent); padding: .55rem 1rem; border-radius: 6px; font: inherit; cursor: pointer; }
+.btn:hover { filter: brightness(1.08); }
+.btn:disabled { opacity: .6; cursor: wait; }
+.btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+.btn.danger { background: transparent; color: var(--danger); border-color: #fecdca; }
+.btn.small { padding: .25rem .6rem; font-size: .85rem; }
+.btn.full { width: 100%; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+label { display: block; font-size: .85rem; font-weight: 600; margin-bottom: .8rem; }
+input, select, textarea { display: block; width: 100%; margin-top: .25rem; padding: .55rem .7rem; border: 1px solid var(--line); border-radius: 6px; font: inherit; background: #fff; }
+
+.auth { min-height: 100vh; display: grid; place-items: center; padding: 1rem; }
+.auth-card { background: var(--surface); width: 100%; max-width: 380px; padding: 2rem; border: 1px solid var(--line); border-radius: 10px; }
+.auth-card h1 { margin: 0 0 .25rem; }
+
+.page { max-width: 1100px; margin: 1.5rem auto; padding: 0 1rem; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: .6rem; margin-bottom: 1rem; }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: .7rem; text-align: left; font: inherit; cursor: pointer; color: var(--muted); }
+.stat b { display: block; font-size: 1.5rem; color: var(--ink); }
+.stat.on { border-color: var(--ink); box-shadow: inset 0 -3px 0 var(--ink); }
+.toolbar { display: flex; gap: .6rem; margin-bottom: 1rem; }
+.toolbar input { margin: 0; }
+
+.table-wrap { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; min-width: 720px; }
+th, td { text-align: left; padding: .7rem .9rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: .8rem; color: var(--muted); font-weight: 600; }
+tr:last-child td { border-bottom: 0; }
+.row-actions { white-space: nowrap; text-align: right; }
+.row-actions .btn + .btn { margin-left: .3rem; }
+
+.badge { display: inline-block; padding: .1rem .55rem; border-radius: 99px; font-size: .8rem; font-weight: 600; color: #fff; background: var(--muted); }
+.badge[data-status="Wishlist"] { background: var(--wishlist); }
+.badge[data-status="Applied"] { background: var(--applied); }
+.badge[data-status="Interview"] { background: var(--interview); }
+.badge[data-status="Offer"] { background: var(--offer); }
+.badge[data-status="Rejected"] { background: var(--rejected); }
+
+.overlay { position: fixed; inset: 0; background: rgba(16,24,40,.5); display: grid; place-items: center; padding: 1rem; overflow-y: auto; }
+.modal { background: var(--surface); width: 100%; max-width: 640px; padding: 1.5rem; border-radius: 10px; max-height: 95vh; overflow-y: auto; }
+.modal h2 { margin-top: 0; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; }
+.actions { display: flex; justify-content: flex-end; gap: .6rem; }
+@media (max-width: 560px) { .grid { grid-template-columns: 1fr; } .toolbar { flex-direction: column; } }
