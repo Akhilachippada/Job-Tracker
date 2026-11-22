@@ -4,10 +4,10 @@ Track job applications, interview dates and statuses in one place.
 
 ## Screenshots
 
-![Login](screenshots/login.png)
+![Login](ScreenShots/login.png.png)
 
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](ScreenShots/Dashboard.png.png)
 
 
 ## Requirements
