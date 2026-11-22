@@ -2,6 +2,14 @@
 
 Track job applications, interview dates and statuses in one place.
 
+## Screenshots
+
+![Login](screenshots/login.png)
+
+
+![Dashboard](screenshots/dashboard.png)
+
+
 ## Requirements
 - Node.js 18+ and npm
 - MySQL 8 running locally
@@ -11,7 +19,7 @@ Track job applications, interview dates and statuses in one place.
 cd backend
 npm install
 ```
-Open `backend/.env` and set `DB_PASSWORD` to your MySQL root password (and change `JWT_SECRET`).
+Copy `backend/.env.example` to `backend/.env` (Windows: `copy .env.example .env`), then set `DB_PASSWORD` to your MySQL password and change `JWT_SECRET`.
 ```
 npm start
 ```
